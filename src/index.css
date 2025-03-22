@@ -1,13 +1,55 @@
+:root {
+    --dark-blue-2: 32, 48, 61;
+    --dark-blue: 17, 22, 31;
+    --black: 49, 71, 90;
+    --gray: 101, 125, 146;
+    --light-gray: 185, 215, 241;
+    --green: 0, 191, 67;
+    --orange: 233, 84, 54;
+    --blue: 0, 187, 255;
+    --red: 250, 48, 48;
+    --yellow: 246, 231, 30;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: rgb(var(--dark-blue));
+    font-size: 14px;
+    color: rgb(var(--light-gray));
+    overflow-y: scroll;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    font-family: "JetBrains Mono", monospace, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(var(--black));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--gray));
 }
