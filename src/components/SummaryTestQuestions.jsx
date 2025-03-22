@@ -22,7 +22,10 @@ export default function SummaryTestQuestions({ setReviewMode, reviewMode, questi
     function downloadQuestions() {
 
         Object.keys(selectedOptions).forEach(id => {
-            questionsData.find(el => el.id == id).alternativas.find(al => al.id == selectedOptions[id]).marked = true;
+            let optionMarked = questionsData.find(el => el.id == id).alternativas.find(al => al.id == selectedOptions[id]);
+            if (optionMarked != null) {
+                optionMarked.marked = true;
+            }
         })
 
         const jsonString = JSON.stringify(questionsData, null, 2);
